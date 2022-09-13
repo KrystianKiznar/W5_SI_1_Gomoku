@@ -82,6 +82,9 @@ int inputRow(int rowNumber) {
 		return y;
 	}
 }
+bool checkIfWinner(vector<vector<char>> board) {
+
+}
 
 int main() {
 	int m;
@@ -101,6 +104,10 @@ int main() {
 	while (true){
 		x = inputCol(n);
 		y = inputRow(m);
+		if (board[y][x] != '.') {
+			std::cout << "This field is occupated! Try again \n";
+			continue;
+		}
 		board[y][x] = sign;
 		sign = changeSign(sign);
 		system("CLS");
